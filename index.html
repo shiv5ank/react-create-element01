@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>React-CreateElement</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+        let div = React.createElement('div', {
+            id: "main",
+            style: {
+                padding: "80px"
+            }
+        }, [
+            React.createElement('div', null, React.createElement('h1', null, "Topics covered")),
+            React.createElement('div', null, React.createElement('p', null, "The following is a list of all the topics we cover in the MDN learning area.")),
+            React.createElement('div', null, React.createElement('a', {
+                href: "/",
+                style: {
+                    color: "Blue",
+                }
+            }, "Getting started with the web")),
+            React.createElement('div', null, React.createElement('p', null, "Provides a practical introduction to web development for complete beginners.")),
+            React.createElement('div', null, React.createElement('a', {
+                href: "/",
+                style: {
+                    color: "Blue",
+                }
+            }, "HTML -- Structuring the web")),
+            React.createElement('div', null, React.createElement('p', null, "HTML is the language that we use to structure the difference parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.")),
+            React.createElement('div', null, React.createElement('a', {
+                href: "/",
+                style: {
+                    color: "Blue",
+                }
+            }, "CSS -- Styling the web")),
+            React.createElement('div', null, React.createElement('p', null, "CSS is the language that we use to control our web content's style and layout, as well as adding behaviour like animation. This topic provides comprehensive coverage of CSS."))
+        ])
+        ReactDOM.render(div, document.getElementById('root'))
+
+
+    </script>
+</body>
+
+</html>
